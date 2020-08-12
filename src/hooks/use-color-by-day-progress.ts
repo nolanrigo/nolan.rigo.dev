@@ -10,7 +10,9 @@ function getDayProgress(): number {
 }
 
 export function useColorByDayProgress(): string {
-  const [dayProgress, setDayProgress] = useState<number>(getDayProgress);
+  const [dayProgress, setDayProgress] = useState<number>(() => {
+    return getDayProgress();
+  });
 
   useEffect(function () {
     const intervalId = setInterval(function () {
@@ -20,5 +22,5 @@ export function useColorByDayProgress(): string {
     return () => clearInterval(intervalId);
   }, []);
 
-  return `hsl(${Math.floor(dayProgress * 360)},50%,50%)`;
+  return `hsl(${dayProgress * 360},50%,50%)`;
 }

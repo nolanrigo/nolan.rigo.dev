@@ -1,4 +1,4 @@
-import React, { MouseEvent as ReactMouseEvent } from "react";
+import React, { MouseEvent as ReactMouseEvent, useRef } from "react";
 import Helmet from "react-helmet";
 import { BsChatSquareQuoteFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
@@ -11,7 +11,11 @@ function onChatClick(e: ReactMouseEvent<HTMLAnchorElement>) {
 }
 
 export default function Index() {
-  const backgroundColor = useColorByDayProgress();
+  const ref = useRef(null);
+  const color = useColorByDayProgress();
+
+  // INFO: Do not generate time based color on the build generation
+  const backgroundColor = ref.current ? color : undefined;
 
   return (
     <>
@@ -24,7 +28,8 @@ export default function Index() {
         />
       </Helmet>
       <div
-        className="flex flex-col items-center justify-center w-screen h-screen text-center bg-gray-400 transition-colors duration-300"
+        ref={ref}
+        className="flex flex-col items-center justify-center w-screen h-screen text-center bg-gray-400 "
         style={{ backgroundColor }}
       >
         <div className="px-4 max-w-7xl sm:px-6 lg:px-8">
