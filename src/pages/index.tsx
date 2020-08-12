@@ -51,21 +51,38 @@ export default function Index() {
           </p>
           <div
             className={c(
-              "flex items-center justify-center w-full my-4 mt-12 transition-opacity duration-100",
+              "grid grid-cols-2 sm:grid-cols-4 w-full my-4 mt-12 transition-opacity duration-100",
               ssr ? "opacity-0" : "opacity-100",
             )}
           >
-            <a href="https://github.com/nolanrigo" className="mx-2">
-              <FaGithub className="w-12 h-12 text-gray-100 hover:text-white" />
+            <a
+              href="https://github.com/nolanrigo"
+              className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
+            >
+              <FaGithub className="w-12 h-12 mb-2" />
+              <p className="font-thin">My projects</p>
             </a>
-            <a href="https://linkedin.com/in/nolanrigo" className="mx-2">
-              <FaLinkedin className="w-12 h-12 text-gray-100 hover:text-white" />
+            <a
+              href="https://linkedin.com/in/nolanrigo"
+              className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
+            >
+              <FaLinkedin className="w-12 h-12 mb-2" />
+              <p className="font-thin">My resume</p>
             </a>
-            <a href="https://twitter.com/nolanrigo" className="mx-2">
-              <FaTwitterSquare className="w-12 h-12 text-gray-100 hover:text-white transition-colors duration-100" />
+            <a
+              href="https://twitter.com/nolanrigo"
+              className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
+            >
+              <FaTwitterSquare className="w-12 h-12 mb-2" />
+              <p className="font-thin">My life</p>
             </a>
-            <a href="#" onClick={onChatClick} className="mx-2">
-              <BsChatSquareQuoteFill className="w-12 h-12 text-gray-100 hover:text-white" />
+            <a
+              href="#"
+              onClick={onChatClick}
+              className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
+            >
+              <BsChatSquareQuoteFill className="w-12 h-12 mb-2" />
+              <p className="font-thin">Let's talk !</p>
             </a>
           </div>
         </div>
