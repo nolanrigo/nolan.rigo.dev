@@ -15,7 +15,7 @@ export function useColorByDayProgress(): string {
   useEffect(function () {
     const intervalId = setInterval(function () {
       setDayProgress(getDayProgress());
-    }, 10000);
+    }, 1000);
 
     return () => clearInterval(intervalId);
   }, []);
