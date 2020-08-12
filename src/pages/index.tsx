@@ -20,6 +20,7 @@ export default function Index() {
   return (
     <>
       <Helmet bodyAttributes={{ class: "antialiased" }}>
+        <title>Nolan Rigo - Javascript developer</title>
         <link
           rel="preload"
           href="https://rsms.me/inter/inter.css"
