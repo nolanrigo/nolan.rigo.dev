@@ -1,3 +1,4 @@
+import c from "classnames";
 import React, { MouseEvent as ReactMouseEvent, useRef } from "react";
 import Helmet from "react-helmet";
 import { BsChatSquareQuoteFill } from "react-icons/bs";
@@ -14,8 +15,7 @@ export default function Index() {
   const ref = useRef(null);
   const color = useColorByDayProgress();
 
-  // INFO: Do not generate time based color on the build generation
-  const backgroundColor = ref.current ? color : undefined;
+  const ssr = !ref.current;
 
   return (
     <>
@@ -29,17 +29,32 @@ export default function Index() {
       </Helmet>
       <div
         ref={ref}
-        className="flex flex-col items-center justify-center w-screen h-screen text-center bg-gray-400 "
-        style={{ backgroundColor }}
+        className="flex flex-col items-center justify-center w-screen h-screen text-center bg-gray-100 transition-colors duration-100"
+        style={{ backgroundColor: ssr ? undefined : color }}
       >
         <div className="px-4 max-w-7xl sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl xl:text-6xl">
+          <h1
+            className={c(
+              "text-4xl font-bold tracking-tight  md:text-5xl xl:text-6xl transition-colors duration-100",
+              ssr ? "text-gray-700" : "text-white",
+            )}
+          >
             Hello, I'm Nolan
           </h1>
-          <p className="my-4 text-lg font-thin text-gray-100 md:text-xl xl:text-2xl ">
+          <p
+            className={c(
+              "my-4 text-lg font-thin text-gray-100 md:text-xl xl:text-2xl transition-opacity duration-100",
+              ssr ? "opacity-0" : "opacity-100",
+            )}
+          >
             Full Stack | Javascript | React.js | Node.js
           </p>
-          <div className="flex items-center justify-center w-full my-4 mt-12">
+          <div
+            className={c(
+              "flex items-center justify-center w-full my-4 mt-12 transition-opacity duration-100",
+              ssr ? "opacity-0" : "opacity-100",
+            )}
+          >
             <a href="https://github.com/nolanrigo" className="mx-2">
               <FaGithub className="w-12 h-12 text-gray-100 hover:text-white" />
             </a>
