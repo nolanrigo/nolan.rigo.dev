@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@nolanrigo/prettier-config": "^3.0.0",
+    "@nolanrigo/tsconfig": "0.0.2",
     "@types/classnames": "^2.2.10",
     "@types/react": "^16.9.45",
     "@types/react-helmet": "^6.1.0",
