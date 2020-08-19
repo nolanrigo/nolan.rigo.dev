@@ -1,9 +1,7 @@
-import c from "classnames";
-import React, { MouseEvent as ReactMouseEvent, useRef } from "react";
+import React, { MouseEvent as ReactMouseEvent } from "react";
 import Helmet from "react-helmet";
 import { BsChatSquareQuoteFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
-import { useColorByDayProgress } from "../hooks/use-color-by-day-progress";
 import { openCrisp } from "../utils/open-crisp";
 
 function onChatClick(e: ReactMouseEvent<HTMLAnchorElement>) {
@@ -12,11 +10,6 @@ function onChatClick(e: ReactMouseEvent<HTMLAnchorElement>) {
 }
 
 export default function Index() {
-  const ref = useRef(null);
-  const color = useColorByDayProgress();
-
-  const ssr = !ref.current;
-
   return (
     <>
       <Helmet bodyAttributes={{ class: "antialiased" }}>
@@ -28,34 +21,15 @@ export default function Index() {
           crossOrigin="anonymous"
         />
       </Helmet>
-      <div
-        ref={ref}
-        className="flex flex-col items-center justify-center w-screen h-screen text-center bg-gray-100 transition-colors duration-100"
-        style={{ backgroundColor: ssr ? undefined : color }}
-      >
+      <div className="flex flex-col items-center justify-center w-screen h-screen text-center bg-blue-600">
         <div className="px-4 max-w-7xl sm:px-6 lg:px-8">
-          <h1
-            className={c(
-              "text-4xl font-bold tracking-tight  md:text-5xl xl:text-6xl transition-colors duration-100",
-              ssr ? "text-gray-700" : "text-white",
-            )}
-          >
+          <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl xl:text-6xl">
             Hello, I'm Nolan
           </h1>
-          <p
-            className={c(
-              "my-4 text-lg font-thin text-gray-100 md:text-xl xl:text-2xl transition-opacity duration-100",
-              ssr ? "opacity-0" : "opacity-100",
-            )}
-          >
+          <p className="my-4 text-lg font-thin text-gray-100 md:text-xl xl:text-2xl ">
             Full Stack | Javascript | React.js | Node.js
           </p>
-          <div
-            className={c(
-              "grid grid-cols-2 sm:grid-cols-4 w-full my-4 mt-12 transition-opacity duration-100",
-              ssr ? "opacity-0" : "opacity-100",
-            )}
-          >
+          <div className="w-full my-4 mt-12 grid grid-cols-2 sm:grid-cols-4">
             <a
               href="https://github.com/nolanrigo"
               className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
