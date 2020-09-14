@@ -35,21 +35,14 @@ export default function Index() {
               className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
             >
               <FaGithub className="w-12 h-12 mb-2" />
-              <p className="font-thin">My projects</p>
+              <p className="font-thin">Github</p>
             </a>
             <a
               href="https://linkedin.com/in/nolanrigo"
               className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
             >
               <FaLinkedin className="w-12 h-12 mb-2" />
-              <p className="font-thin">My resume</p>
-            </a>
-            <a
-              href="https://twitter.com/nolanrigo"
-              className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
-            >
-              <FaTwitterSquare className="w-12 h-12 mb-2" />
-              <p className="font-thin">My life</p>
+              <p className="font-thin">Linkedin</p>
             </a>
             <a
               href="#"
