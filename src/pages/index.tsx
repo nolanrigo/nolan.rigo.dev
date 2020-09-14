@@ -1,7 +1,7 @@
 import React, { MouseEvent as ReactMouseEvent } from "react";
 import Helmet from "react-helmet";
 import { BsChatSquareQuoteFill } from "react-icons/bs";
-import { FaGithub, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { openCrisp } from "../utils/open-crisp";
 
 function onChatClick(e: ReactMouseEvent<HTMLAnchorElement>) {
@@ -29,7 +29,7 @@ export default function Index() {
           <p className="my-4 text-lg font-thin text-gray-100 md:text-xl xl:text-2xl ">
             Full Stack | Javascript | React.js | Node.js
           </p>
-          <div className="w-full my-4 mt-12 grid grid-cols-2 sm:grid-cols-4">
+          <div className="w-full my-4 mt-12 grid grid-cols-2 sm:grid-cols-3">
             <a
               href="https://github.com/nolanrigo"
               className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
