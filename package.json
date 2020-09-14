@@ -14,25 +14,25 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "gatsby": "^2.24.26",
+    "gatsby": "^2.24.58",
     "gatsby-plugin-cname": "^1.0.0",
     "gatsby-plugin-crisp-chat": "^3.2.2",
     "gatsby-plugin-react-helmet": "^3.3.10",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "react-icons": "^3.10.0",
-    "tailwindcss": "^1.6.2"
+    "react-icons": "^3.11.0",
+    "tailwindcss": "^1.8.10"
   },
   "devDependencies": {
-    "@nolanrigo/prettier-config": "^3.0.0",
-    "@nolanrigo/tsconfig": "0.0.2",
+    "@nolanrigo/prettier-config": "^3.0.2",
+    "@nolanrigo/tsconfig": "0.2.0",
     "@types/classnames": "^2.2.10",
-    "@types/react": "^16.9.45",
+    "@types/react": "^16.9.49",
     "@types/react-helmet": "^6.1.0",
     "gatsby-plugin-postcss": "^2.3.11",
-    "prettier": "^2.0.5",
-    "typescript": "^3.9.7"
+    "prettier": "^2.1.1",
+    "typescript": "^4.0.2"
   },
   "prettier": "@nolanrigo/prettier-config"
 }
