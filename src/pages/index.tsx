@@ -21,25 +21,25 @@ export default function Index() {
           crossOrigin="anonymous"
         />
       </Helmet>
-      <div className="flex flex-col items-center justify-center w-screen h-screen text-center bg-blue-600">
+      <div className="flex flex-col items-center justify-center w-screen h-screen text-center bg-white">
         <div className="px-4 max-w-7xl sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl xl:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 md:text-5xl xl:text-6xl">
             Hello, I'm Nolan
           </h1>
-          <p className="my-4 text-lg font-thin text-gray-100 md:text-xl xl:text-2xl ">
+          <p className="my-4 text-lg font-thin text-gray-800 md:text-xl xl:text-2xl ">
             Full Stack | Javascript | React.js | Node.js
           </p>
           <div className="w-full my-4 mt-12 grid grid-cols-2 sm:grid-cols-3">
             <a
               href="https://github.com/nolanrigo"
-              className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
+              className="flex flex-col items-center p-4 text-gray-800 hover:text-gray-900"
             >
               <FaGithub className="w-12 h-12 mb-2" />
               <p className="font-thin">Github</p>
             </a>
             <a
               href="https://linkedin.com/in/nolanrigo"
-              className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
+              className="flex flex-col items-center p-4 text-gray-800 hover:text-gray-900"
             >
               <FaLinkedin className="w-12 h-12 mb-2" />
               <p className="font-thin">Linkedin</p>
@@ -47,7 +47,7 @@ export default function Index() {
             <a
               href="#"
               onClick={onChatClick}
-              className="flex flex-col items-center p-4 text-gray-100 hover:text-white"
+              className="flex flex-col items-center p-4 text-gray-800 hover:text-gray-900"
             >
               <BsChatSquareQuoteFill className="w-12 h-12 mb-2" />
               <p className="font-thin">Let's talk !</p>
