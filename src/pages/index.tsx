@@ -1,7 +1,7 @@
 import React, { MouseEvent as ReactMouseEvent } from "react";
 import Helmet from "react-helmet";
 import { BsChatSquareQuoteFill } from "react-icons/bs";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMastodon } from "react-icons/fa";
 import { openCrisp } from "../utils/open-crisp";
 
 function onChatClick(e: ReactMouseEvent<HTMLAnchorElement>) {
@@ -14,6 +14,9 @@ export default function Index() {
     <>
       <Helmet bodyAttributes={{ class: "antialiased" }}>
         <title>Nolan Rigo - Web developer</title>
+        <a rel="me" href="https://mamot.fr/@nolan">
+          Mastodon
+        </a>
         <link
           rel="preload"
           href="https://rsms.me/inter/inter.css"
@@ -29,13 +32,20 @@ export default function Index() {
           <p className="my-4 text-lg font-thin text-gray-800 md:text-xl xl:text-2xl ">
             Full Stack | Javascript | React.js | Node.js
           </p>
-          <div className="w-full my-4 mt-12 grid grid-cols-2 sm:grid-cols-3">
+          <div className="w-full my-4 mt-12 grid grid-cols-2 sm:grid-cols-4">
             <a
               href="https://github.com/nolanrigo"
               className="flex flex-col items-center p-4 text-gray-800 hover:text-gray-900"
             >
               <FaGithub className="w-12 h-12 mb-2" />
               <p className="font-thin">Github</p>
+            </a>
+            <a
+              href="https://mamot.fr/@nolan"
+              className="flex flex-col items-center p-4 text-gray-800 hover:text-gray-900"
+            >
+              <FaMastodon className="w-12 h-12 mb-2" />
+              <p className="font-thin">Mastodon</p>
             </a>
             <a
               href="https://linkedin.com/in/nolanrigo"
