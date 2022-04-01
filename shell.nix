@@ -4,7 +4,6 @@ stdenv.mkDerivation {
   name = "nolanrigodev";
 
   buildInputs = [
-    gnumake
     nodejs-16_x
     python3
   ];
