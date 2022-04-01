@@ -1,4 +1,12 @@
 {
-  "extends": "@nolanrigo/tsconfig/reactjs/tsconfig.json",
-  "include": ["src/**/*"]
+  "extends": "@nolanrigo/typescript-config",
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "esnext"],
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node"
+  }
 }

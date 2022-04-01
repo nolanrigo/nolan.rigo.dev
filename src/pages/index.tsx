@@ -13,7 +13,7 @@ export default function Index() {
   return (
     <>
       <Helmet bodyAttributes={{ class: "antialiased" }}>
-        <title>Nolan Rigo - Web developer</title>
+        <title>Noolan Rigo - Web developer</title>
         <a rel="me" href="https://mamot.fr/@nolan">
           Mastodon
         </a>

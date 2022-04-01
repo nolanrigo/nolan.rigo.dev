@@ -1,10 +1,13 @@
 with import <nixpkgs> {};
 
 stdenv.mkDerivation {
-  name = "env";
+  name = "nolanrigodev";
+
   buildInputs = [
-    nodejs-12_x
+    gnumake
+    nodejs-16_x
+    python3
   ];
-  shellHooks = ''
-  '';
+
+  GATSBY_TELEMETRY_DISABLED = 1;
 }
