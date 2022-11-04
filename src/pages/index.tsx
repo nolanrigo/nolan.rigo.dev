@@ -21,6 +21,7 @@ export default function Index() {
           as="font"
           crossOrigin="anonymous"
         />
+        <a rel="me" href="https://at-tiret-point.at/@point">Mastodon</a>
       </Helmet>
       <div className="flex flex-col items-center justify-center w-screen h-screen text-center bg-white">
         <div className="px-4 max-w-7xl sm:px-6 lg:px-8">
