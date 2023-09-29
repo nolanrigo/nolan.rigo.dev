@@ -1,8 +1,8 @@
 with import <nixpkgs> {};
 stdenv.mkDerivation {
-  name = "env";
+  name = "nolan.rigo.dev";
   buildInputs = [
-    nodejs_20
+    bun
     just
   ];
 }
